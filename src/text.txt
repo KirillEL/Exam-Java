@@ -1,0 +1,17 @@
+1) лямбда выражения появились в java 8
+есть функциональный интерфейс (интерфейс с одним абстрактным методом)
+
+interface myInterface {
+   int sum(int x, int y);
+}
+
+class c {
+    myInterface f = new myInterface() { // анонимный класс
+        @Override
+        int sum(int x, int y) {
+            return x + y;
+        }
+    };
+    or
+    myInterface mI = (x,y) -> x + y; // лямбда выражение
+}
